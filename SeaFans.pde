@@ -21,8 +21,7 @@ void draw() {
   } else {
   
     // Sea Fans
-    //new RectFan(width*0.5, height*0.5, 1.0, 0).draw();
-    //new Fan(width*0.5, height*0.5, 1.0, 0).draw();
+    //new Fan(width*0.5, height*0.5, 1.0, 0, 0).draw();
   
     blendMode(SCREEN);
   
@@ -65,9 +64,11 @@ float stayNegative(float value) {
   else return value;
 }
 
+/*
 void keyPressed() {
   if (key == 'd') { 
     debug = !debug;
     redraw();
   }
 }
+*/
