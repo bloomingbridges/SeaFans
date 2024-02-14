@@ -2,4 +2,4 @@
 
 Direct Translation for [*ReCode Project*](http://recodeproject.com/artwork/v1n2sea-fans) using Processing 3.2.1
 
-![Sea Fans Preview](https://dl.dropboxusercontent.com/u/998319/linked/sea_fans_preview.png)
+![Sea Fans Preview](preview.png)
