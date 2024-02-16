@@ -2,7 +2,7 @@
 function drawFan( x, y, size, rotation, instability ) {
   fill(0, 0);
   stroke(255, 250);
-  strokeWeight(map(scale, 0.8, 1.0, 1.5, 3));
+  strokeWeight(map(size / pixelDensity(), 0.8, 1.0, 1.5, 3));
   
   push();
   
@@ -14,7 +14,7 @@ function drawFan( x, y, size, rotation, instability ) {
     for ( let s = -7; s < 7; ++s ) {
       push();
         rotate(radians(glitchFloat(s*6+3,abs(s),instability)));
-        stripLength = 32 + glitchInt(8-(abs(s),instability));
+        stripLength = 32 + glitchInt(8-abs(s),instability);
         if (s >= 0) { stripLength -= 1; }
         if (s == -6 || s == 5) { stripLength -= int(random(1,3)); }
         if (s == -7 || s == 6) { stripLength -= int(random(2,abs(s))); }
@@ -64,10 +64,9 @@ function glitchFloat( value, degree, instabilityLevel ) {
 }
   
 function glitchInt( value, instabilityLevel ) {
-  if (random(0,1) > 0.5) { 
+  if (random() > 0.5) { 
     return value + int(random(0,instabilityLevel)); 
-  }
-  else { 
+  } else { 
     return value - int(random(0,instabilityLevel)); 
   }
 }
